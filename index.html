@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConvenPos: una caja para cada tarea</title>
+  <meta name="description" content="Ventas, caja, inventario, créditos y reportes en un programa para Windows. Abre cada caja y mira la pantalla real y cómo se maneja.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#8fc3ec">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="saltar" href="#funciones">Saltar al contenido</a>
+
+  <header class="barra">
+    <a class="marca" href="#inicio" aria-label="ConvenPos, ir al inicio"><img src="img/logo.png" alt="" width="32" height="32"><span>ConvenPos</span></a>
+    <nav aria-label="Principal">
+      <a href="#funciones">Funciones</a>
+      <a href="#tallas">Tallas y colores</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="boton chico" href="https://convenpos.netlify.app/#demo">Solicitar demo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="titulo-inicio">
+      <div class="hero-texto">
+        <h1 id="titulo-inicio">Todo tu negocio cabe en una caja</h1>
+        <p>Ventas, caja, inventario, créditos y reportes en un programa para Windows que guarda todo en tu computador.</p>
+        <div class="acciones">
+          <a class="boton" href="https://convenpos.netlify.app/#demo">Solicitar demo</a>
+          <a class="boton contorno" href="#funciones">Ver cómo funciona</a>
+        </div>
+      </div>
+
+      <div class="pila">
+        <div class="caja cajon" data-rev="caja" style="--i:0">
+          <div class="rotulo" aria-hidden="true">
+            <span class="codigo">100</span>
+            <strong>Ventas</strong>
+            <span class="detalle">Cobrar y entregar</span>
+            <i class="ph ph-shopping-bag-open"></i>
+          </div>
+          <figure class="bandeja">
+            <img src="img/pantallas/venta-carrito-claro.webp" width="2236" height="1520" alt="Pantalla Nueva Venta de ConvenPos con un carrito de tres productos y un total a cobrar de 129.700 pesos.">
+          </figure>
+        </div>
+        <div class="caja corta c2" data-rev="caja" style="--i:1" aria-hidden="true">
+          <div class="rotulo"><span class="codigo">200</span><strong>Caja</strong><span class="detalle">Abrir y cerrar</span><i class="ph ph-cash-register"></i></div>
+        </div>
+        <div class="caja corta c3" data-rev="caja" style="--i:2" aria-hidden="true">
+          <div class="rotulo"><span class="codigo">300</span><strong>Inventario</strong><span class="detalle">Tallas S M L XL</span><i class="ph ph-sneaker"></i></div>
+        </div>
+        <div class="caja corta c4" data-rev="caja" style="--i:3" aria-hidden="true">
+          <div class="rotulo"><span class="codigo">400</span><strong>Clientes</strong><span class="detalle">Créditos y separados</span><i class="ph ph-hand-coins"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mostrador" id="mostrador" aria-labelledby="titulo-mostrador">
+      <div class="contenedor">
+        <div class="cabecera">
+          <h2 id="titulo-mostrador" data-rev="texto">Hecho para el mostrador</h2>
+          <p data-rev="texto" style="--i:1">Quien cobra, recibe mercancía y cuenta la caja todos los días necesita un programa que no estorbe.</p>
+        </div>
+        <div class="fotos">
+          <figure class="f1" data-rev="foto">
+            <img src="img/personas/tablet-mostrador.jpg" width="1600" height="1067" alt="Una dependienta atiende en el mostrador de una tienda pequeña mientras una tableta registra la venta." loading="lazy">
+            <figcaption>Cobro en el mostrador</figcaption>
+          </figure>
+          <figure class="f2" data-rev="foto" style="--i:1">
+            <img src="img/personas/pago-en-efectivo.jpg" width="1600" height="2400" alt="Dos manos intercambian billetes sobre un mostrador durante un pago en efectivo." loading="lazy">
+            <figcaption>Abonos en efectivo</figcaption>
+          </figure>
+          <figure class="f3" data-rev="foto" style="--i:2">
+            <img src="img/personas/cobro-con-bolsas.jpg" width="1600" height="1067" alt="Dos mujeres conversan junto al mostrador de una boutique con bolsas de compras." loading="lazy">
+            <figcaption>Entrega de la compra</figcaption>
+          </figure>
+          <figure class="f4" data-rev="foto" style="--i:3">
+            <img src="img/personas/bodega-con-tableta.jpg" width="1600" height="1067" alt="Un trabajador revisa existencias con una tableta entre estantes de una bodega." loading="lazy">
+            <figcaption>Existencias en la bodega</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="muro" id="funciones" aria-labelledby="titulo-funciones">
+      <div class="contenedor">
+        <div class="cabecera">
+          <h2 id="titulo-funciones" data-rev="texto">Una caja para cada tarea</h2>
+          <p data-rev="texto" style="--i:1">Toca una caja o teclea su número del 1 al 8. Se abre y muestra la pantalla real y cómo se maneja.</p>
+        </div>
+
+        <div class="pared" role="tablist" aria-label="Funciones de ConvenPos" data-rev="texto" style="--i:2">
+          <button class="caja" role="tab" id="t-100" aria-controls="p-100" aria-selected="true" type="button"><span class="rotulo"><span class="codigo">100</span><strong>Ventas</strong><span class="detalle">Cobrar y entregar</span><i class="ph ph-shopping-bag-open"></i></span></button>
+          <button class="caja" role="tab" id="t-200" aria-controls="p-200" aria-selected="false" tabindex="-1" type="button"><span class="rotulo"><span class="codigo">200</span><strong>Caja</strong><span class="detalle">Abrir y cerrar</span><i class="ph ph-cash-register"></i></span></button>
+          <button class="caja" role="tab" id="t-300" aria-controls="p-300" aria-selected="false" tabindex="-1" type="button"><span class="rotulo"><span class="codigo">300</span><strong>Inventario</strong><span class="detalle">Tallas y colores</span><i class="ph ph-sneaker"></i></span></button>
+          <button class="caja" role="tab" id="t-400" aria-controls="p-400" aria-selected="false" tabindex="-1" type="button"><span class="rotulo"><span class="codigo">400</span><strong>Clientes</strong><span class="detalle">Créditos y separados</span><i class="ph ph-hand-coins"></i></span></button>
+          <button class="caja" role="tab" id="t-500" aria-controls="p-500" aria-selected="false" tabindex="-1" type="button"><span class="rotulo"><span class="codigo">500</span><strong>Compras</strong><span class="detalle">Pedidos y recepción</span><i class="ph ph-package"></i></span></button>
+          <button class="caja" role="tab" id="t-600" aria-controls="p-600" aria-selected="false" tabindex="-1" type="button"><span class="rotulo"><span class="codigo">600</span><strong>Empleados</strong><span class="detalle">Nómina y asistencia</span><i class="ph ph-users-three"></i></span></button>
+          <button class="caja" role="tab" id="t-700" aria-controls="p-700" aria-selected="false" tabindex="-1" type="button"><span class="rotulo"><span class="codigo">700</span><strong>Reportes</strong><span class="detalle">Ganancia y cierres</span><i class="ph ph-chart-line-up"></i></span></button>
+          <button class="caja" role="tab" id="t-800" aria-controls="p-800" aria-selected="false" tabindex="-1" type="button"><span class="rotulo"><span class="codigo">800</span><strong>Equipos</strong><span class="detalle">Celular y sincronización</span><i class="ph ph-devices"></i></span></button>
+        </div>
+
+        <div class="interior">
+          <section class="panel" id="p-100" role="tabpanel" aria-labelledby="t-100" tabindex="0">
+            <div class="panel-medios">
+              <figure class="pantalla"><img src="img/pantallas/venta-carrito-claro.webp" width="2236" height="1520" alt="Pantalla Nueva Venta con el buscador, un carrito de tres productos y el total a cobrar." loading="lazy"><figcaption>Ventas, con datos de ejemplo</figcaption></figure>
+            </div>
+            <div class="panel-texto">
+              <h3>Ventas</h3>
+              <p>Escribes o escaneas el producto, ajustas el precio si hace falta y cobras. El total siempre está a la vista.</p>
+              <ul class="pasos">
+                <li><strong>Busca</strong> por nombre o código, o pasa el lector de código de barras.</li>
+                <li><strong>Elige</strong> la talla y el color en una cuadrícula con el stock. <em class="pronto">Próxima versión</em></li>
+                <li><strong>Cobra</strong> en efectivo, tarjeta, transferencia, Addi o Sistecrédito, en un pago o mezclados, o deja la venta a crédito.</li>
+                <li><strong>Entrega</strong> el recibo impreso, o por WhatsApp. <em class="pronto">Próxima versión</em></li>
+              </ul>
+              <p class="tambien">También: descuentos con motivo, devoluciones, cambios y ventas anuladas.</p>
+            </div>
+          </section>
+
+          <section class="panel" id="p-200" role="tabpanel" aria-labelledby="t-200" tabindex="0" hidden>
+            <div class="panel-medios">
+              <figure class="pantalla"><img src="img/pantallas/caja-abrir-claro.webp" width="2236" height="1120" alt="Pantalla de Caja con el campo del monto inicial y el botón Abrir Caja, y los totales del día." loading="lazy"><figcaption>Caja, con datos de ejemplo</figcaption></figure>
+              <figure class="pantalla secundaria"><img src="img/pantallas/cierre-caja-oscuro.webp" width="1380" height="1750" alt="Ventana Cierre de Caja con el resumen del día por forma de pago." loading="lazy"><figcaption>Cierre de caja</figcaption></figure>
+            </div>
+            <div class="panel-texto">
+              <h3>Caja</h3>
+              <p>Abres con el dinero con el que empiezas y cierras contando billetes y monedas. Sin la caja abierta no se puede cobrar.</p>
+              <ul class="pasos">
+                <li><strong>Abre</strong> la caja con el monto inicial.</li>
+                <li><strong>Registra</strong> ingresos y retiros de efectivo cuando ocurran.</li>
+                <li><strong>Cierra</strong> revisando el resumen por forma de pago y contando billetes y monedas.</li>
+                <li><strong>Justifica</strong> cualquier diferencia: queda guardada en el historial de cierres.</li>
+              </ul>
+              <p class="tambien">El efectivo esperado se muestra con el PIN de administrador, para que el conteo sea honesto.</p>
+            </div>
+          </section>
+
+          <section class="panel" id="p-300" role="tabpanel" aria-labelledby="t-300" tabindex="0" hidden>
+            <div class="panel-medios">
+              <figure class="pantalla"><img src="img/pantallas/productos-claro.webp" width="2236" height="1400" alt="Pantalla Productos con buscador, filtros por marca, categoría, talla y color, y una tabla de camisas por talla." loading="lazy"><figcaption>Inventario, con datos de ejemplo</figcaption></figure>
+            </div>
+            <div class="panel-texto">
+              <h3>Inventario</h3>
+              <p>Cada producto tiene su categoría, marca, talla y color. Los creas uno por uno, por lote o importando tu lista.</p>
+              <ul class="pasos">
+                <li><strong>Crea</strong> todas las combinaciones de talla y color de una vez.</li>
+                <li><strong>Importa</strong> tu catálogo desde Excel o CSV.</li>
+                <li><strong>Imprime</strong> etiquetas con código de barras.</li>
+                <li><strong>Cuenta</strong> el inventario y ajusta con autorización; las alertas avisan cuando algo se acaba.</li>
+              </ul>
+              <p class="tambien">También: actualización de precios en bloque y promociones.</p>
+            </div>
+          </section>
+
+          <section class="panel" id="p-400" role="tabpanel" aria-labelledby="t-400" tabindex="0" hidden>
+            <div class="panel-medios">
+              <figure class="pantalla"><img src="img/pantallas/separados-claro.webp" width="2236" height="1400" alt="Pantalla Separados con dos separados pendientes, el saldo pendiente y los botones Recibo, Abonar y Cancelar." loading="lazy"><figcaption>Separados, con datos de ejemplo</figcaption></figure>
+            </div>
+            <div class="panel-texto">
+              <h3>Clientes</h3>
+              <p>Vende a crédito con fecha de vencimiento y recibe abonos. Un separado reserva el producto hasta que se paga.</p>
+              <ul class="pasos">
+                <li><strong>Crea</strong> el separado con el abono inicial y la fecha límite.</li>
+                <li><strong>Registra</strong> cada abono: el saldo baja solo.</li>
+                <li><strong>Entrega</strong> cuando el saldo llegue a cero, o cancela y el producto vuelve al inventario.</li>
+                <li><strong>Recuerda</strong> por WhatsApp: el mensaje queda listo, tú lo revisas y tú lo envías.</li>
+              </ul>
+              <p class="tambien">Las ventas a crédito quedan en Por cobrar, con su fecha de vencimiento.</p>
+            </div>
+          </section>
+
+          <section class="panel" id="p-500" role="tabpanel" aria-labelledby="t-500" tabindex="0" hidden>
+            <div class="panel-medios">
+              <figure class="pantalla"><img src="img/pantallas/compras-claro.webp" width="2236" height="1400" alt="Pantalla Nueva Compra con las opciones Compra recibida y Pedido a proveedor y los botones Elegir tallas y colores y Reposición sugerida." loading="lazy"><figcaption>Compras, con datos de ejemplo</figcaption></figure>
+            </div>
+            <div class="panel-texto">
+              <h3>Compras</h3>
+              <p>Registra lo que llegó o lo que pediste al proveedor. El stock sube cuando recibes.</p>
+              <ul class="pasos">
+                <li><strong>Elige</strong> Compra recibida si la mercancía ya llegó, o Pedido a proveedor si apenas la pides.</li>
+                <li><strong>Carga</strong> las variantes con Elegir tallas y colores.</li>
+                <li><strong>Agrega</strong> con Reposición sugerida lo que llegó a su stock mínimo.</li>
+                <li><strong>Recibe</strong> completo o en partes, abona la deuda y devuelve lo que llegó mal.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="panel" id="p-600" role="tabpanel" aria-labelledby="t-600" tabindex="0" hidden>
+            <div class="panel-medios">
+              <figure class="pantalla"><img src="img/pantallas/nomina-claro.webp" width="2236" height="1400" alt="Pantalla Empleados y nómina con el gasto del mes, el pendiente por pagar y la estimación anticipada por empleado." loading="lazy"><figcaption>Nómina, con datos de ejemplo</figcaption></figure>
+            </div>
+            <div class="panel-texto">
+              <h3>Empleados</h3>
+              <p>Lleva la nómina, la asistencia y los anticipos de tu equipo desde el mismo programa.</p>
+              <ul class="pasos">
+                <li><strong>Registra</strong> pagos flexibles por hora, turno, día o periodo.</li>
+                <li><strong>Controla</strong> la asistencia y los turnos.</li>
+                <li><strong>Da</strong> anticipos y préstamos a tus empleados.</li>
+                <li><strong>Mira</strong> cuánto inviertes cada mes en tu equipo.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="panel" id="p-700" role="tabpanel" aria-labelledby="t-700" tabindex="0" hidden>
+            <div class="panel-medios">
+              <figure class="pantalla"><img src="img/pantallas/reportes-claro.webp" width="2236" height="1400" alt="Pantalla Reportes con filtros de fechas y tarjetas de ventas, ganancia bruta, ganancia neta, facturas y productos vendidos." loading="lazy"><figcaption>Reportes, con datos de ejemplo</figcaption></figure>
+            </div>
+            <div class="panel-texto">
+              <h3>Reportes</h3>
+              <p>Mira ventas, ganancia bruta y neta, facturas y productos vendidos por el rango que elijas.</p>
+              <ul class="pasos">
+                <li><strong>Elige</strong> Hoy, Esta semana o Este mes, o tus propias fechas.</li>
+                <li><strong>Filtra</strong> por cliente, forma de pago o ventas con descuento.</li>
+                <li><strong>Exporta</strong> el reporte a PDF.</li>
+                <li><strong>Revisa</strong> el resumen diario, la rentabilidad mensual y las alertas de stock bajo.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="panel" id="p-800" role="tabpanel" aria-labelledby="t-800" tabindex="0" hidden>
+            <div class="panel-medios">
+              <figure class="pantalla foto"><img src="img/personas/tienda-de-barrio.jpg" width="1600" height="2400" alt="Una clienta pide en el mostrador de una tienda pequeña mientras la dependienta la atiende." loading="lazy"></figure>
+            </div>
+            <div class="panel-texto">
+              <h3>Equipos</h3>
+              <p>ConvenPos guarda todo en tu computador y funciona sin internet. Con un plan con sincronización, varios equipos comparten los datos.</p>
+              <ul class="pasos">
+                <li><strong>Trabaja</strong> sin conexión; la licencia en línea se verifica al menos cada 3 días.</li>
+                <li><strong>Conecta</strong> 2 o 4 computadores según el plan.</li>
+                <li><strong>Usa</strong> la app para Android para ver reportes y alertas, y para cobrar cuando hay internet.</li>
+              </ul>
+              <p class="tambien">Eliges el tema claro o el oscuro en Configuración.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="tallas" id="tallas" aria-labelledby="titulo-tallas">
+      <div class="contenedor tallas-grid">
+        <figure class="tallas-foto" data-rev="foto">
+          <img src="img/personas/cajas-de-zapatillas.jpg" width="1600" height="900" alt="Estantes llenos de cajas de zapatillas de colores, ordenadas por modelo." loading="lazy">
+        </figure>
+        <div class="tallas-texto">
+          <h2 id="titulo-tallas" data-rev="texto">Tallas y colores sin enredos</h2>
+          <p data-rev="texto" style="--i:1">Crea todas las combinaciones de un producto de una vez y mira el stock de cada una en una cuadrícula.</p>
+          <table class="corrida" data-rev="texto" style="--i:2">
+            <caption>Camisa Polo R1, existencias de ejemplo</caption>
+            <thead><tr><th scope="col">Color</th><th scope="col">S</th><th scope="col">M</th><th scope="col">L</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Azul</th><td>06</td><td>01</td><td>08</td></tr>
+              <tr><th scope="row">Rojo</th><td>04</td><td class="agotada">00</td><td>05</td></tr>
+            </tbody>
+          </table>
+          <ul class="lista" data-rev="texto" style="--i:3">
+            <li>Genera las variantes por lote y elige una celda al vender. <em class="pronto">Próxima versión</em></li>
+            <li>Importa tu catálogo desde Excel o CSV.</li>
+            <li>Imprime etiquetas con código de barras.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="preguntas" id="preguntas" aria-labelledby="titulo-preguntas">
+      <div class="contenedor">
+        <h2 id="titulo-preguntas" data-rev="texto">Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Funciona sin internet?</summary>
+          <p>Sí. Las ventas, la caja y el inventario se guardan en tu computador y puedes trabajar sin conexión. Si tu negocio tiene una licencia en línea, ConvenPos necesita conectarse al menos cada 3 días para verificarla.</p>
+        </details>
+        <details>
+          <summary>¿Dónde se guardan mis datos?</summary>
+          <p>En tu computador. Solo si vinculas una cuenta en línea se guardan los datos de la cuenta y de la licencia, y, si tu plan incluye sincronización, una copia de los datos del negocio para compartirlos entre tus equipos.</p>
+        </details>
+        <details>
+          <summary>¿ConvenPos emite factura electrónica?</summary>
+          <p>No. Genera comprobantes internos, recibos y reportes que no son factura electrónica ante la DIAN. Si tu negocio está obligado a facturar electrónicamente, debes usar un facturador autorizado.</p>
+        </details>
+        <details>
+          <summary>¿Sirve para mi tipo de negocio?</summary>
+          <p>Está pensado para tiendas, minimercados, boutiques y negocios parecidos. Las tallas y los colores son opcionales: si vendes sin variantes, simplemente no los usas.</p>
+        </details>
+        <details>
+          <summary>¿En cuántos computadores puedo usarlo?</summary>
+          <p>Depende del plan: uno, dos o cuatro equipos. Los planes y sus precios están en el sitio principal de ConvenPos.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final" aria-labelledby="titulo-final">
+      <div class="contenedor final-grid">
+        <div class="final-texto">
+          <h2 id="titulo-final" data-rev="texto">Mira ConvenPos con los productos de tu negocio</h2>
+          <p data-rev="texto" style="--i:1">Una demostración sin costo para revisar ventas, caja e inventario.</p>
+          <div class="acciones" data-rev="texto" style="--i:2">
+            <a class="boton" href="https://convenpos.netlify.app/#demo">Solicitar demo</a>
+            <a class="boton contorno" href="https://convenpos.netlify.app/#planes">Ver planes y descargar</a>
+          </div>
+        </div>
+        <figure class="final-foto" data-rev="foto">
+          <img src="img/personas/toque-en-pantalla.jpg" width="1600" height="1067" alt="Una mano toca la pantalla de una tableta en el mostrador de una tienda." loading="lazy">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Las pantallas muestran ConvenPos con datos de ejemplo. Las fotos son de uso libre de Pexels y no muestran a clientes ni al programa. Lo marcado como próxima versión aún no está en el instalador publicado.</p>
+      <nav aria-label="Legal y sitio principal">
+        <a href="https://convenpos.netlify.app/">Sitio principal</a>
+        <a href="https://convenpos.netlify.app/privacidad.html">Privacidad</a>
+        <a href="https://convenpos.netlify.app/terminos.html">Términos</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
